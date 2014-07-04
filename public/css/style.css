@@ -3,6 +3,12 @@
     width: extend-to-zoom;
 }
 
+canvas {
+	display: block;
+    position: fixed;
+    z-index:0;
+}
+
 body {
     margin: 0px;
     background-color: white;
