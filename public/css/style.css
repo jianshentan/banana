@@ -8,7 +8,7 @@ body {
     background-color: white;
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
-    min-width: 960px;
+    min-width: 1080px;
 }
 
 input {
@@ -224,11 +224,9 @@ input {
     text-shadow: 20px 20px 5px #aaa;
 }
 
-.at {
-    font-size: 1.0em;
-    font-weight: 800;
-    vertical-align: top;
-    font-weight: 300;
+.header01 > div {
+    display: inline-block;
+    margin: 20px auto;
 }
 
 #banner {

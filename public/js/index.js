@@ -61,6 +61,7 @@ $( document ).ready(function() {
                 var that = $(this);
 
                 $( "#buy-submit" ).click(function() { 
+                    $( this ).off( "click" );
                     var input = $( "#buy-email" );
                     var progressElement = $( "#buy-progress" );
                     var progressWidth = '379px';
@@ -82,6 +83,7 @@ $( document ).ready(function() {
 
     // subscribe to website on-click
     $( "#subscribe-button" ).click( function() { 
+        $( this ).off( "click" );
         var input = $( "#subscribe > input" );
         var progressElement = $( '#subscribe-progress' );
         var progressWidth = '416px';
@@ -156,6 +158,7 @@ function modal( id ) {
 
 function modalBtn( id ) {
     $( "#detail-buy-submit" ).click( function() {
+        $( this ).off( "click" );
         var input = $( "#detail-buy-email" );
         var progressElement = $( "#detail-buy-progress" );
         var progressWidth = '350px';
