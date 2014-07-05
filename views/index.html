@@ -1,0 +1,192 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta property="og:url"         content="http://banananananana.org" />
+        <meta property="og:title"       content="BΔNΔNΔ" />
+        <meta property="og:type"        content="website" />
+        <meta property="og:image"       content="" />
+        <meta property="og:desc"        content="" />
+
+        <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0'" />
+
+        <title>THE BANANA CARTEL</title>
+
+        <link rel="shortcut icon" href="/media/banana.ico" />
+
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:3--italic,400italic,600italic,700italic,800italic,400,800,700,600,300' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Raleway:4--,300' rel='stylesheet' type='text/css'>
+    </head> 
+    <body>
+        <canvas id="canvas"></canvas>
+        <div id="detail-modal-background" class="modal-background">
+            <div id="detail-modal">
+                <div id="detail-modal-left">
+                    <img src=""/>
+                </div> 
+                <div id="detail-modal-right">
+
+                    <div id="detail-modal-share">
+                        <div id="detail-modal-price">$--</div>
+                        <div class="detail-modal-share-icon" id="detail-modal-twitter">
+                            <img src="media/twitter_icon.png" width="50" height="50"/>
+                        </div>
+                        <div class="detail-modal-share-icon" id="detail-modal-facebook">
+                            <img src="media/facebook_icon.png" width="50" height="50" />
+                        </div>
+                        <div class="detail-modal-share-icon" id="detail-modal-pinterest">
+                            <img src="media/pinterest_icon.png" width="50" height="50" />
+                        </div>
+                    </div>
+
+                    <div id="detail-modal-desc">--</div>
+                    
+                    <div id="detail-modal-buy">
+                        <div id="detail-buy-text">
+                            Interested? Enter your email and we'll get back to you!
+                        </div>
+                        <div id="detail-buy-progress" class="progress"></div>
+                        <input id="detail-buy-email" type="text" placeholder="enter your email"><!--
+                        --><div id="detail-buy-submit"> > </div>
+                    </div>
+
+                </div> 
+            </div>
+            <div id="close-detail-modal" class="close-modal">X</div>
+        </div>
+
+        <div id="buy-modal-background" class="modal-background">
+            <div id="buy-modal">
+                <div id="buy-text">
+                    Interested? Enter your email and we'll get back to you!
+                </div>
+                <div id="buy-progress" class="progress"></div>
+                <input id="buy-email" type="text" placeholder="enter your email"><!--
+                --><div id="buy-submit">></div>
+            </div>
+            <div id="close-buy-modal" class="close-modal">X</div>
+        </div>
+
+        <div id="banner">
+            <div id="title">
+                <div class="header01">
+                    <div>THE</div> 
+                    <div>BANANA</div> 
+                    <div>CARTEL</div>
+                </div>
+            </div>
+            <div id="nav">
+                <div id="subscribe-progress" class="progress"></div>
+                <div id="subscribe">
+                    <input type="text" placeholder="subscribe with email"><!--
+                    --><div id="subscribe-button"> > </div>
+                </div>
+            </div>
+        </div>
+        <div id="post-container">
+            <div class="post" id="a01">
+                <div class="post-content" id="b01"></div>
+                <div class="post-desc">
+                    <div class="price">$--</div>
+                    <div class="buy">BUY</div>
+                </div>
+            </div><!--
+            --><div class="post" id="a02">
+                <div class="post-content" id="b02"></div>
+                <div class="post-desc">
+                    <div class="price">$--</div>
+                    <div class="buy">BUY</div>
+                </div>
+            </div><!--
+            --><div class="post" id="a03">
+                <div class="post-content" id="b03"></div>
+                <div class="post-desc">
+                    <div class="price">$--</div>
+                    <div class="buy">BUY</div>
+                </div>
+            </div><!--
+            --><div class="post" id="a04">
+                <div class="post-content" id="b04"></div>
+                <div class="post-desc">
+                    <div class="price">$--</div>
+                    <div class="buy">BUY</div>
+                </div>
+            </div><!--
+            --><div class="post" id="a05">
+                <div class="post-content" id="b05"></div>
+                <div class="post-desc">
+                    <div class="price">$--</div>
+                    <div class="buy">BUY</div>
+                </div>
+            </div><!--
+            --><div class="post" id="a06">
+                <div class="post-content" id="b06"></div>
+                <div class="post-desc">
+                    <div class="price">$--</div>
+                    <div class="buy">BUY</div>
+                </div>
+            </div><!--
+            --><div class="post" id="a07">
+                <div class="post-content" id="b07"></div>
+                <div class="post-desc">
+                    <div class="price">$--</div>
+                    <div class="buy">BUY</div>
+                </div>
+            </div><!--
+            --><div class="post" id="a08">
+                <div class="post-content" id="b08"></div>
+                <div class="post-desc">
+                    <div class="price">$--</div>
+                    <div class="buy">BUY</div>
+                </div>
+            </div><!--
+            --><div class="post" id="a09">
+                <div class="post-content" id="b09"></div>
+                <div class="post-desc">
+                    <div class="price">$--</div>
+                    <div class="buy">BUY</div>
+                </div>
+            </div><!--
+            --><div class="post" id="a10">
+                <div class="post-content" id="b10"></div>
+                <div class="post-desc">
+                    <div class="price">$--</div>
+                    <div class="buy">BUY</div>
+                </div>
+            </div><!--
+            --><div class="post" id="a11">
+                <div class="post-content" id="b11"></div>
+                <div class="post-desc">
+                    <div class="price">$--</div>
+                    <div class="buy">BUY</div>
+                </div>
+            </div><!--
+            --><div class="post" id="a12">
+                <div class="post-content" id="b12"></div>
+                <div class="post-desc">
+                    <div class="price">$--</div>
+                    <div class="buy">BUY</div>
+                </div>
+            </div>
+        </div>
+        <div id="about">
+            <img class="wiggle" src="media/wiggle.png" />
+            This line of furniture by <a href="">GDSG</a> and <a href="">Hi Sorry We Deid</a> was inpsired by wood lamination processes and bananas! 
+        </div>
+        <div class="social-media">
+            <a href="mailto:thebananacartel.co@gmail.com"> 
+                <img id="facebook" src="media/facebook_icon.png" />
+            </a>
+            <a href="mailto:thebananacartel.co@gmail.com"> 
+                <img id="pinterest" src="media/mail_icon.png" />
+            </a>
+        </div>
+
+        <script src="js/jquery-2.0.3.min.js"></script>
+        <script src="js/data.js"></script>
+        <script src="js/index.js"></script>
+        <script src="js/confetti.js"></script>
+            
+    </body>
+</html>
