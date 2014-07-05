@@ -1,4 +1,5 @@
 $( document ).ready(function() {
+
     // route mah app
     var route = window.location.pathname.split('/');
     route = route[ route.length-1 ];
