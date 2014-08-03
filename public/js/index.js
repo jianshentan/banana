@@ -205,7 +205,8 @@ function customizeModal( postId ) {
     $( "#detail-modal-twitter" ).on( 'click', function() {
         window.open("https://twitter.com/share?"+
            "url=" + encodeURIComponent( getBaseURL() + postId ) +
-           "&hashtags=thebananacartel"
+           "&hashtags=thebananacartel" +
+           "&text=Visit%20thebananacartel.co%20to%20buy%20and%20see%20what%20else%20we%20have."
          , "", "width=400, height=400");
     });
 
