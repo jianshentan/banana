@@ -4,7 +4,53 @@ $( document ).ready(function() {
     var route = window.location.pathname.split('/');
     route = route[ route.length-1 ];
     switch ( route ) {
-        case "":
+        case "a01":
+            metaTags( "http://www.thebananacartel.co/a01", 
+                      "http://www.thebananacartel.co/media/B01.png" );
+            break;
+        case "a02":
+            metaTags( "http://www.thebananacartel.co/a02", 
+                      "http://www.thebananacartel.co/media/B02.png" );
+            break;
+        case "a03":
+            metaTags( "http://www.thebananacartel.co/a03", 
+                      "http://www.thebananacartel.co/media/B03.png" );
+            break;
+        case "a04":
+            metaTags( "http://www.thebananacartel.co/a04", 
+                      "http://www.thebananacartel.co/media/B04.png" );
+            break;
+        case "a05":
+            metaTags( "http://www.thebananacartel.co/a05", 
+                      "http://www.thebananacartel.co/media/B05.png" );
+            break;
+        case "a06":
+            metaTags( "http://www.thebananacartel.co/a06", 
+                      "http://www.thebananacartel.co/media/B06.png" );
+            break;
+        case "a07":
+            metaTags( "http://www.thebananacartel.co/a07", 
+                      "http://www.thebananacartel.co/media/B07.png" );
+            break;
+        case "a08":
+            metaTags( "http://www.thebananacartel.co/a08", 
+                      "http://www.thebananacartel.co/media/B08.png" );
+            break;
+        case "a09":
+            metaTags( "http://www.thebananacartel.co/a09", 
+                      "http://www.thebananacartel.co/media/B09.png" );
+            break;
+        case "a10":
+            metaTags( "http://www.thebananacartel.co/a10", 
+                      "http://www.thebananacartel.co/media/B10.png" );
+            break;
+        case "a11":
+            metaTags( "http://www.thebananacartel.co/a11", 
+                      "http://www.thebananacartel.co/media/B11.png" );
+            break;
+        case "a12":
+            metaTags( "http://www.thebananacartel.co/a12", 
+                      "http://www.thebananacartel.co/media/B12.png" );
             break;
         case "about": 
             break;
@@ -205,8 +251,8 @@ function customizeModal( postId ) {
     // TWITTER
     $( "#detail-modal-twitter" ).on( 'click', function() {
         window.open("https://twitter.com/share?"+
-           "url=" + encodeURIComponent( getBaseURL + postId ) +
-           "&hashtags=banana"
+           "url=" + encodeURIComponent( getBaseURL() + postId ) +
+           "&hashtags=thebananacartel"
          , "", "width=400, height=400");
     });
 
@@ -217,7 +263,7 @@ function customizeModal( postId ) {
                     "url%5D=" + encodeURIComponent( getBaseURL() + postId )+
                     "&p%5Bimages%5D%5B0%5D=" + encodeURIComponent( imgUrl ) +
                     "&p%5Btitle%5D=BANANA"+
-                    "&p%5Bsummary%5D=BANANA%20grows%20meat%20from%20celebrity%20tissue%20samples%0Aand%20uses%20it%20to%20make%20artisanal%20salami.%20%23EatCelebrityMeat");
+                    "&p%5Bsummary%5D=The%20Banana%20Cartel.%20Visit%20thebananacartel.co%20to%20buy%20and%20see%20what%20else%20we%20have.");
     });
 
     // PINTEREST
@@ -225,8 +271,19 @@ function customizeModal( postId ) {
         window.open( "http://pinterest.com/pin/create/button/?"+
                      "url=" + encodeURIComponent( getBaseURL() + postId ) +
                      "&media=" + encodeURIComponent( imgUrl ) +
-                     "&description=" + encodeURIComponent( "this is a desc of the product" ));
+                     "&description=" + encodeURIComponent( "Check out the rest of it at www.thebananacartel.co" ));
     });
+};
+
+/**
+ * $param url
+ * $param image
+ */
+function metaTags( url, image ) {
+    $( "meta[property='og:url']" ).attr( "content", url );
+    $( "meta[property='twitter:url']" ).attr( "content", url );
+    $( "meta[property='og:image']" ).attr( "content", image );
+    $( "meta[property='twitter:image']" ).attr( "content", image );
 };
 
 function validateEmail( email ) { 
