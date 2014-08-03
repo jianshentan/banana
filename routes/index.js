@@ -24,10 +24,20 @@ exports.index = function( req, res ){
 };
 
 for( var i=1; i<13; i++ ) {
-    exports[ "a"+stringifyNumber(i) ] = function( req, res ) {
-        res.render( 'index' );
-    }
+    exports[ "a"+stringifyNumber(i) ] = ( function( index ) {
+        return function( req, res ) {
+            res.render( 'a' + intToString( index ) );
+        }
+    })(i);
 }
+
+function intToString( i ) {
+    if( i > 9 ) {
+        return "" + i;
+    } else {
+        return "0" + i;
+    }
+};
 
 exports.about = function( req, res ) {
     res.render( 'index' );
