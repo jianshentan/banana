@@ -294,6 +294,6 @@ function validateEmail( email ) {
 };
 
 function getBaseURL() {
-   return location.protocol + "//" + location.hostname + 
+   return "http://www." + location.protocol + "//" + location.hostname + 
       (location.port && ":" + location.port) + "/";
 };
