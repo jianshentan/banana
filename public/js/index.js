@@ -4,6 +4,8 @@ $( document ).ready(function() {
     var route = window.location.pathname.split('/');
     route = route[ route.length-1 ];
     switch ( route ) {
+        case "":
+            break;
         case "a01":
             metaTags( "http://www.thebananacartel.co/a01", 
                       "http://www.thebananacartel.co/media/B01.png" );
