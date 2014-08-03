@@ -306,6 +306,6 @@ function validateEmail( email ) {
 };
 
 function getBaseURL() {
-   return "http://www." + location.protocol + "//" + location.hostname + 
+   return location.protocol + "//" + location.hostname + 
       (location.port && ":" + location.port) + "/";
 };
