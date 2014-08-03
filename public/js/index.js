@@ -9,50 +9,62 @@ $( document ).ready(function() {
         case "a01":
             metaTags( "http://www.thebananacartel.co/a01", 
                       "http://www.thebananacartel.co/media/B01.png" );
+            modal( route );
             break;
         case "a02":
             metaTags( "http://www.thebananacartel.co/a02", 
                       "http://www.thebananacartel.co/media/B02.png" );
+            modal( route );
             break;
         case "a03":
             metaTags( "http://www.thebananacartel.co/a03", 
                       "http://www.thebananacartel.co/media/B03.png" );
+            modal( route );
             break;
         case "a04":
             metaTags( "http://www.thebananacartel.co/a04", 
                       "http://www.thebananacartel.co/media/B04.png" );
+            modal( route );
             break;
         case "a05":
             metaTags( "http://www.thebananacartel.co/a05", 
                       "http://www.thebananacartel.co/media/B05.png" );
+            modal( route );
             break;
         case "a06":
             metaTags( "http://www.thebananacartel.co/a06", 
                       "http://www.thebananacartel.co/media/B06.png" );
+            modal( route );
             break;
         case "a07":
             metaTags( "http://www.thebananacartel.co/a07", 
                       "http://www.thebananacartel.co/media/B07.png" );
+            modal( route );
             break;
         case "a08":
             metaTags( "http://www.thebananacartel.co/a08", 
                       "http://www.thebananacartel.co/media/B08.png" );
+            modal( route );
             break;
         case "a09":
             metaTags( "http://www.thebananacartel.co/a09", 
                       "http://www.thebananacartel.co/media/B09.png" );
+            modal( route );
             break;
         case "a10":
             metaTags( "http://www.thebananacartel.co/a10", 
                       "http://www.thebananacartel.co/media/B10.png" );
+            modal( route );
             break;
         case "a11":
             metaTags( "http://www.thebananacartel.co/a11", 
                       "http://www.thebananacartel.co/media/B11.png" );
+            modal( route );
             break;
         case "a12":
             metaTags( "http://www.thebananacartel.co/a12", 
                       "http://www.thebananacartel.co/media/B12.png" );
+            modal( route );
             break;
         case "about": 
             break;
