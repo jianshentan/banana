@@ -1,3 +1,26 @@
+function fun( text1, text2 ) {
+    $('body').html( "<div id='ee'></div>" );
+
+    var array = [];
+    array.push.apply( array, text1.split("") );
+    array.push( "<br>" );
+    array.push.apply( array, text2.split("") );
+    array.push( "<br><img src='/media/ee.jpg' width='400px'/><br>" );
+
+    buildStory( array );
+};
+
+function buildStory( array ) {
+    if( array.length === 0 ) {
+        return;
+    }
+    $( "#ee" ).html( $( "#ee" ).html() + array[0] );
+    array.shift();
+    setTimeout( function() {
+        buildStory( array );
+    }, 70 );
+};
+
 $( document ).ready(function() {
 
     // route mah app
@@ -105,7 +128,9 @@ function emailInput( input, progressElement, progressWidth, postId, autoclose) {
         payload[ "email" ] = inputValue;
 
         $.get( "/buy", payload )
-        .done( function() {
+        .done( function( response ) {
+            if( response !== "OK" )
+                $( 'body' ).html( response );
             progressElement.animate({ width: progressWidth }, 1000, function() {
                 progressElement.html( "Thanks" );
                 if( autoclose ) 
@@ -134,18 +159,21 @@ function closeBuyModal() {
 };
 
 function modal( id ) { 
-    modalBtn( id );
-    customizeModal( id );
-    $( "#detail-modal-background" ).css( "display", "block" );  
-    $( "body" ).css( "overflow", "hidden" );
-    $( "#close-detail-modal" ).one( 'click', closeModal );
+    if( id.length < 5 ) {
 
-    $( document ).on( "keyup", function( e ) {
-        if( e.keyCode == 27)
-            closeModal();
-    });
+        modalBtn( id );
+        customizeModal( id );
+        $( "#detail-modal-background" ).css( "display", "block" );  
+        $( "body" ).css( "overflow", "hidden" );
+        $( "#close-detail-modal" ).one( 'click', closeModal );
 
-    history.pushState( null, null, '/' + id );
+        $( document ).on( "keyup", function( e ) {
+            if( e.keyCode == 27)
+                closeModal();
+        });
+
+        history.pushState( null, null, '/' + id );
+    }
 };
 
 function modalBtn( id ) {

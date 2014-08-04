@@ -48,6 +48,9 @@ app.get('/about', routes.about);
 // buy email
 app.get('/buy', routes.buy);
 
+// easter_egg
+app.get('/hi_beb', routes.easter_egg );
+
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });

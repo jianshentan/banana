@@ -428,4 +428,7 @@ input {
     margin: 0 10 ; 
 }
 
-
+/* -------------------- Easter egg ------------------- */
+.ee {
+    display: inline-block; 
+}

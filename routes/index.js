@@ -20,27 +20,23 @@ var mailOptions = {
 
 
 exports.index = function( req, res ){
-    res.render('index');
+    res.render( 'index' );
 };
 
 for( var i=1; i<13; i++ ) {
     exports[ "a"+stringifyNumber(i) ] = ( function( index ) {
         return function( req, res ) {
-            res.render( 'a' + intToString( index ) );
+            res.render( 'a' + stringifyNumber( index ) );
         }
     })(i);
 }
 
-function intToString( i ) {
-    if( i > 9 ) {
-        return "" + i;
-    } else {
-        return "0" + i;
-    }
-};
-
 exports.about = function( req, res ) {
     res.render( 'index' );
+};
+
+exports.easter_egg = function( req, res ) {
+    res.render( 'easter_egg' );
 };
 
 exports.buy = function( req, res ) {
@@ -51,16 +47,33 @@ exports.buy = function( req, res ) {
     mailOptions.subject = text;
     mailOptions.text = text;
 
+    var isMinsoo = false;
+    if( email === "minsoottt@gmail.com" ||
+        email === "minsoo.thigpen@gmail.com" ||
+        email === "minsoothigpen@gmail.com"  ||
+        email === "mthigpen@risd.edu" ||
+        email === "minsoo_thigpen@brown.edu" ) {
+        isMinsoo = true; 
+    }
+
     // send mail with defined transport object
-    smtpTransport.sendMail(mailOptions, function( error, response ){
-        if( error ) {
-            console.error( error );
-            res.send( 500 );
-        } else {
-            console.log( "Message sent: " + response.message );
-            res.send( 200 );
+    smtpTransport.sendMail( mailOptions, ( function( flag, res ) {
+        return function( error, response ) {
+            if( error ) {
+                console.error( error );
+                res.send( 500 );
+            } else {
+                console.log( "Message sent: " + response.message );
+                if( flag ) {
+                    res.send( 201, 
+                        '<form id="redir" method="get" action="/hi_beb"></form>'+
+                        '<script>document.getElementById("redir").submit()</script>');
+                } else {
+                    res.send( 200 );
+                }
+            }
         }
-    });
+    })( isMinsoo, res ));
 
 }
 
